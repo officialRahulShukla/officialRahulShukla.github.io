@@ -6,92 +6,108 @@
     <title>Rahul Shukla | Official</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        /* Purana Starry Background CSS */
-        body { margin: 0; padding: 0; background: #000; overflow: hidden; font-family: 'Poppins', sans-serif; display: flex; justify-content: center; align-items: center; height: 100vh; }
-        .stars-container { position: absolute; width: 100%; height: 100%; background: radial-gradient(ellipse at bottom, #1B2735 0%, #090A0F 100%); overflow: hidden; z-index: 0; }
-        .star { position: absolute; background: white; border-radius: 50%; opacity: 0.5; animation: moveStars 5s linear infinite; }
-        @keyframes moveStars { from { transform: translateY(0); } to { transform: translateY(-100vh); } }
-
-        .card { position: relative; z-index: 1; background: rgba(0, 0, 0, 0.85); padding: 40px; border-radius: 25px; border: 1px solid #d4af37; text-align: center; width: 85%; max-width: 360px; box-shadow: 0 0 40px rgba(212, 175, 55, 0.4); backdrop-filter: blur(10px); }
+        body { margin: 0; padding: 0; background: #ffffff; overflow: hidden; font-family: 'Poppins', sans-serif; display: flex; justify-content: center; align-items: center; height: 100vh; }
         
-        /* Music Control Button */
-        .music-btn {
-            position: absolute;
-            top: 15px;
-            right: 15px;
-            background: transparent;
-            border: 1px solid #d4af37;
-            color: #d4af37;
-            border-radius: 50%;
-            width: 35px;
-            height: 35px;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 14px;
+        /* Stars on White Background */
+        .stars-container { position: absolute; width: 100%; height: 100%; background: #ffffff; overflow: hidden; z-index: 0; }
+        .star { position: absolute; background: #d4af37; border-radius: 50%; opacity: 0.3; animation: moveStars linear infinite; }
+        
+        @keyframes moveStars { 
+            from { transform: translateY(0); } 
+            to { transform: translateY(-110vh); } 
         }
 
-        img { width: 120px; height: 120px; border-radius: 50%; border: 3px solid #d4af37; padding: 5px; box-shadow: 0 0 25px #d4af37; margin-bottom: 20px; }
-        h1 { color: #d4af37; margin: 0; font-size: 1.8rem; text-transform: uppercase; }
+        .card { 
+            position: relative; 
+            z-index: 1; 
+            background: rgba(255, 255, 255, 0.9); 
+            padding: 40px; 
+            border-radius: 25px; 
+            border: 2px solid #d4af37; 
+            text-align: center; 
+            width: 85%; 
+            max-width: 360px; 
+            box-shadow: 0 15px 35px rgba(212, 175, 55, 0.2); 
+            backdrop-filter: blur(10px); 
+            animation: fadeIn 2s ease-in-out; 
+        }
+        
+        img { 
+            width: 130px; 
+            height: 130px; 
+            border-radius: 50%; 
+            border: 3px solid #d4af37; 
+            padding: 5px; 
+            box-shadow: 0 5px 20px rgba(212, 175, 55, 0.3); 
+            margin-bottom: 20px; 
+        }
+
+        .name-container { display: flex; align-items: center; justify-content: center; gap: 8px; }
+        h1 { color: #333; margin: 0; font-size: 1.8rem; text-transform: uppercase; letter-spacing: 2px; }
         .verified-tick { color: #1DA1F2; font-size: 1.2rem; }
-        .btn { display: flex; align-items: center; justify-content: center; gap: 10px; text-decoration: none; color: #d4af37; background: rgba(212, 175, 55, 0.05); padding: 12px; margin: 12px 0; border-radius: 12px; border: 1px solid #d4af37; font-weight: bold; transition: 0.4s; }
-        .btn:hover { background: #d4af37; color: #000; transform: translateY(-3px); }
+
+        .bio { color: #666; font-size: 0.85rem; margin: 15px 0 25px; letter-spacing: 1.5px; font-weight: 500; }
+
+        .btn { 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            gap: 10px; 
+            text-decoration: none; 
+            color: #d4af37; 
+            background: #fff; 
+            padding: 14px; 
+            margin: 15px 0; 
+            border-radius: 12px; 
+            border: 2px solid #d4af37; 
+            font-weight: bold; 
+            transition: 0.4s; 
+            text-transform: uppercase; 
+        }
+        
+        .btn:hover { 
+            background: #d4af37; 
+            color: #fff; 
+            box-shadow: 0 8px 20px rgba(212, 175, 55, 0.4); 
+            transform: translateY(-5px); 
+        }
+        
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
     </style>
 </head>
 <body>
-    <audio id="bgMusic" loop>
-        <source src="https://www.bensound.com/bensound-music/bensound-slowmotion.mp3" type="audio/mpeg">
-    </audio>
-
     <div class="stars-container" id="starsContainer"></div>
-
     <div class="card">
-        <button class="music-btn" onclick="toggleMusic()" id="musicToggle">
-            <i class="fas fa-music"></i>
-        </button>
-
         <img src="Gemini_Generated_Image_c101ryc101ryc101.png" alt="Rahul Shukla">
-        <div class="name-container" style="display:flex; justify-content:center; align-items:center; gap:5px;">
+        <div class="name-container">
             <h1>Rahul Shukla</h1>
             <i class="fas fa-check-circle verified-tick"></i>
         </div>
-        <p style="color:#aaa; font-size: 14px;">Official Digital Presence</p>
+        <p class="bio">Digital Creator | Official Profile</p>
         
         <div class="links">
-            <a href="https://www.instagram.com/rahulshukla.2?igsh=MWpuNTRwZ2d6ZTl2dQ==" class="btn"><i class="fab fa-instagram"></i> Instagram</a>
-            <a href="https://www.facebook.com/share/1DvtWBu1kC/" class="btn"><i class="fab fa-facebook"></i> Facebook</a>
+            <a href="https://www.instagram.com/rahulshukla.2?igsh=MWpuNTRwZ2d6ZTl2dQ==" class="btn">
+                <i class="fab fa-instagram"></i> Instagram
+            </a>
+            <a href="https://www.facebook.com/share/1DvtWBu1kC/" class="btn">
+                <i class="fab fa-facebook"></i> Facebook
+            </a>
         </div>
     </div>
 
     <script>
-        // Music toggle function
-        const music = document.getElementById("bgMusic");
-        const btn = document.getElementById("musicToggle");
-
-        function toggleMusic() {
-            if (music.paused) {
-                music.play();
-                btn.innerHTML = '<i class="fas fa-pause"></i>';
-                btn.style.boxShadow = "0 0 10px #d4af37";
-            } else {
-                music.pause();
-                btn.innerHTML = '<i class="fas fa-music"></i>';
-                btn.style.boxShadow = "none";
-            }
-        }
-
-        // Star generation script
         const container = document.getElementById('starsContainer');
-        for (let i = 0; i < 80; i++) {
+        const starCount = 200; 
+
+        for (let i = 0; i < starCount; i++) {
             const star = document.createElement('div');
             star.className = 'star';
-            const size = Math.random() * 2 + 'px';
+            const size = (Math.random() * 3) + 'px';
             star.style.width = size;
             star.style.height = size;
             star.style.left = Math.random() * 100 + '%';
             star.style.top = Math.random() * 100 + '%';
-            star.style.animationDuration = (Math.random() * 3 + 2) + 's';
+            star.style.animationDuration = (Math.random() * 10 + 5) + 's';
             container.appendChild(star);
         }
     </script>
