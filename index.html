@@ -5,63 +5,68 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rahul Shukla | Official</title>
     <style>
-        /* Naya Stylish Background */
+        @keyframes goldGlow {
+            0% { box-shadow: 0 0 10px rgba(212, 175, 55, 0.4); }
+            50% { box-shadow: 0 0 25px rgba(212, 175, 55, 0.8); }
+            100% { box-shadow: 0 0 10px rgba(212, 175, 55, 0.4); }
+        }
         body { 
             margin: 0; 
             font-family: 'Poppins', sans-serif; 
-            background: linear-gradient(135deg, #0f0c29, #302b63, #24243e); 
-            color: white; 
+            background: radial-gradient(circle, #1a1a1a 0%, #000000 100%); 
+            color: #d4af37; 
             display: flex; 
             justify-content: center; 
             align-items: center; 
             height: 100vh; 
-            text-align: center; 
+            overflow: hidden;
         }
         .card { 
-            background: rgba(255, 255, 255, 0.05); 
+            background: #0a0a0a; 
             padding: 40px; 
-            border-radius: 30px; 
-            backdrop-filter: blur(15px); 
-            border: 1px solid rgba(255, 255, 255, 0.1); 
-            box-shadow: 0 25px 50px rgba(0,0,0,0.5); 
+            border-radius: 20px; 
+            border: 1px solid #d4af37; 
+            text-align: center;
             width: 85%; 
-            max-width: 380px; 
+            max-width: 350px;
+            animation: fadeIn 1.5s ease-in-out;
         }
         img { 
-            width: 130px; 
-            height: 130px; 
+            width: 120px; 
+            height: 120px; 
             border-radius: 50%; 
             object-fit: cover; 
-            border: 4px solid #00d2ff; 
-            box-shadow: 0 0 25px rgba(0, 210, 255, 0.5); 
-            margin-bottom: 15px; 
+            border: 3px solid #d4af37; 
+            animation: goldGlow 3s infinite;
+            margin-bottom: 15px;
         }
         h1 { 
-            margin: 10px 0 5px; 
-            font-size: 2.2rem; 
-            letter-spacing: 1px;
-            background: linear-gradient(to right, #00d2ff, #3a7bd5); 
-            -webkit-background-clip: text; 
-            -webkit-text-fill-color: transparent; 
+            margin: 10px 0; 
+            font-size: 1.8rem; 
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            text-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
         }
-        p { color: #ccc; margin-bottom: 25px; font-style: italic; }
         .btn { 
             display: block; 
             text-decoration: none; 
-            color: white; 
-            background: rgba(255, 255, 255, 0.1); 
-            padding: 14px; 
-            margin: 12px 0; 
-            border-radius: 50px; 
-            border: 1px solid #00d2ff; 
-            font-weight: 600; 
-            transition: 0.4s ease; 
+            color: #d4af37; 
+            background: transparent; 
+            padding: 12px; 
+            margin: 15px 0; 
+            border-radius: 5px; 
+            border: 1px solid #d4af37; 
+            font-weight: bold; 
+            transition: all 0.4s; 
         }
         .btn:hover { 
-            background: #00d2ff; 
-            color: #0f0c29; 
-            transform: scale(1.05); 
-            box-shadow: 0 0 20px rgba(0, 210, 255, 0.6); 
+            background: #d4af37; 
+            color: #000; 
+            transform: scale(1.05);
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
         }
     </style>
 </head>
@@ -69,10 +74,10 @@
     <div class="card">
         <img src="Gemini_Generated_Image_c101ryc101ryc101.png" alt="Rahul Shukla">
         <h1>Rahul Shukla</h1>
-        <p>Official Digital Identity</p>
+        <p style="color: #888; font-size: 0.8rem; letter-spacing: 2px;">OFFICIAL PROFILE</p>
         <div class="links">
-            <a href="https://www.instagram.com/rahulshukla.2?igsh=MWpuNTRwZ2d6ZTl2dQ==" class="btn">Instagram Profile</a>
-            <a href="#" class="btn">WhatsApp Message</a>
+            <a href="https://www.instagram.com/rahulshukla.2?igsh=MWpuNTRwZ2d6ZTl2dQ==" class="btn">INSTAGRAM</a>
+            <a href="https://wa.me/91XXXXXXXXXX" class="btn">WHATSAPP</a>
         </div>
     </div>
 </body>
