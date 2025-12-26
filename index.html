@@ -5,79 +5,110 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rahul Shukla | Official</title>
     <style>
-        body { 
-            margin: 0; 
-            font-family: 'Poppins', sans-serif; 
-            /* Premium Gradient Background */
-            background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d); 
-            background-size: 400% 400%;
-            animation: gradientBG 15s ease infinite;
-            display: flex; 
-            justify-content: center; 
-            align-items: center; 
-            height: 100vh; 
-            text-align: center; 
+        body {
+            margin: 0;
+            padding: 0;
+            background: #000;
+            overflow: hidden;
+            font-family: 'Poppins', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
         }
-        @keyframes gradientBG {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
+
+        /* Sitare banane ka tarika */
+        .stars {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: transparent;
+            z-index: 0;
         }
-        .card { 
-            /* Glassmorphism Effect */
-            background: rgba(255, 255, 255, 0.1); 
-            backdrop-filter: blur(15px); 
-            -webkit-backdrop-filter: blur(15px);
-            padding: 40px; 
-            border-radius: 30px; 
-            border: 1px solid rgba(255, 255, 255, 0.2); 
-            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37); 
-            width: 85%; 
-            max-width: 360px; 
-            color: white;
+
+        .stars::after {
+            content: "";
+            position: absolute;
+            top: -10rem;
+            left: -10rem;
+            width: calc(100% + 20rem);
+            height: calc(100% + 20rem);
+            background-image: radial-gradient(2px 2px at 20px 30px, #eee, rgba(0,0,0,0)),
+                              radial-gradient(2px 2px at 40px 70px, #fff, rgba(0,0,0,0)),
+                              radial-gradient(2px 2px at 50px 160px, #ddd, rgba(0,0,0,0));
+            background-repeat: repeat;
+            background-size: 200px 200px;
+            animation: starsAnim 4s infinite alternate;
         }
-        img { 
-            width: 120px; 
-            height: 120px; 
-            border-radius: 50%; 
-            object-fit: cover; 
-            border: 3px solid rgba(255, 255, 255, 0.5); 
-            margin-bottom: 15px; 
-            box-shadow: 0 0 20px rgba(0,0,0,0.2);
+
+        @keyframes starsAnim {
+            from { opacity: 0.3; }
+            to { opacity: 0.8; }
         }
-        h1 { 
-            margin: 10px 0 5px; 
-            font-size: 2rem; 
-            font-weight: 700;
-            letter-spacing: 1px;
+
+        .card {
+            position: relative;
+            z-index: 1;
+            background: rgba(10, 10, 10, 0.9);
+            padding: 40px;
+            border-radius: 20px;
+            border: 1px solid #d4af37;
+            text-align: center;
+            width: 85%;
+            max-width: 350px;
+            box-shadow: 0 0 30px rgba(212, 175, 55, 0.3);
         }
-        p { color: rgba(255, 255, 255, 0.8); margin-bottom: 30px; font-size: 0.9rem; }
-        .btn { 
-            display: block; 
-            text-decoration: none; 
-            color: white; 
-            background: rgba(255, 255, 255, 0.15); 
-            padding: 14px; 
-            margin: 12px 0; 
-            border-radius: 15px; 
-            border: 1px solid rgba(255, 255, 255, 0.2); 
-            font-weight: 600; 
-            transition: 0.3s ease; 
+
+        img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #d4af37;
+            box-shadow: 0 0 20px rgba(212, 175, 55, 0.6);
+            margin-bottom: 20px;
         }
-        .btn:hover { 
-            background: rgba(255, 255, 255, 0.3); 
-            transform: translateY(-3px); 
+
+        h1 {
+            color: #d4af37;
+            margin: 10px 0;
+            font-size: 1.8rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .btn {
+            display: block;
+            text-decoration: none;
+            color: #d4af37;
+            background: transparent;
+            padding: 12px;
+            margin: 15px 0;
+            border-radius: 8px;
+            border: 1px solid #d4af37;
+            font-weight: bold;
+            transition: 0.4s;
+        }
+
+        .btn:hover {
+            background: #d4af37;
+            color: #000;
+            box-shadow: 0 0 15px #d4af37;
+            transform: scale(1.05);
         }
     </style>
 </head>
 <body>
+    <div class="stars"></div>
     <div class="card">
         <img src="Gemini_Generated_Image_c101ryc101ryc101.png" alt="Rahul Shukla">
         <h1>Rahul Shukla</h1>
-        <p>Official Digital Presence</p>
+        <p style="color: #888; letter-spacing: 1px;">OFFICIAL PROFILE</p>
         <div class="links">
-            <a href="https://www.instagram.com/rahulshukla.2?igsh=MWpuNTRwZ2d6ZTl2dQ==" class="btn">Follow on Instagram</a>
-            <a href="https://www.facebook.com/share/1DvtWBu1kC/" class="btn">Connect on Facebook</a>
+            <a href="https://www.instagram.com/rahulshukla.2?igsh=MWpuNTRwZ2d6ZTl2dQ==" class="btn">INSTAGRAM</a>
+            <a href="https://www.facebook.com/share/1DvtWBu1kC/" class="btn">FACEBOOK</a>
         </div>
     </div>
 </body>
