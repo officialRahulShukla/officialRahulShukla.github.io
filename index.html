@@ -5,71 +5,68 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rahul Shukla | Official</title>
     <style>
-        @keyframes goldGlow {
-            0% { box-shadow: 0 0 10px rgba(212, 175, 55, 0.4); }
-            50% { box-shadow: 0 0 25px rgba(212, 175, 55, 0.8); }
-            100% { box-shadow: 0 0 10px rgba(212, 175, 55, 0.4); }
-        }
         body { 
             margin: 0; 
             font-family: 'Poppins', sans-serif; 
-            background: radial-gradient(circle, #1a1a1a 0%, #000000 100%); 
-            color: #d4af37; 
+            /* Premium Gradient Background */
+            background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d); 
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
             display: flex; 
             justify-content: center; 
             align-items: center; 
             height: 100vh; 
-            overflow: hidden;
+            text-align: center; 
+        }
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
         }
         .card { 
-            background: #0a0a0a; 
+            /* Glassmorphism Effect */
+            background: rgba(255, 255, 255, 0.1); 
+            backdrop-filter: blur(15px); 
+            -webkit-backdrop-filter: blur(15px);
             padding: 40px; 
-            border-radius: 20px; 
-            border: 1px solid #d4af37; 
-            text-align: center;
+            border-radius: 30px; 
+            border: 1px solid rgba(255, 255, 255, 0.2); 
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37); 
             width: 85%; 
-            max-width: 350px;
-            animation: fadeIn 1.5s ease-in-out;
+            max-width: 360px; 
+            color: white;
         }
         img { 
             width: 120px; 
             height: 120px; 
             border-radius: 50%; 
             object-fit: cover; 
-            border: 3px solid #d4af37; 
-            animation: goldGlow 3s infinite;
-            margin-bottom: 15px;
+            border: 3px solid rgba(255, 255, 255, 0.5); 
+            margin-bottom: 15px; 
+            box-shadow: 0 0 20px rgba(0,0,0,0.2);
         }
         h1 { 
-            margin: 10px 0; 
-            font-size: 1.8rem; 
-            text-transform: uppercase;
-            letter-spacing: 3px;
-            text-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
+            margin: 10px 0 5px; 
+            font-size: 2rem; 
+            font-weight: 700;
+            letter-spacing: 1px;
         }
+        p { color: rgba(255, 255, 255, 0.8); margin-bottom: 30px; font-size: 0.9rem; }
         .btn { 
             display: block; 
             text-decoration: none; 
-            color: #d4af37; 
-            background: transparent; 
-            padding: 12px; 
-            margin: 15px 0; 
-            border-radius: 5px; 
-            border: 1px solid #d4af37; 
-            font-weight: bold; 
-            transition: all 0.4s; 
-            text-transform: uppercase;
-            letter-spacing: 1px;
+            color: white; 
+            background: rgba(255, 255, 255, 0.15); 
+            padding: 14px; 
+            margin: 12px 0; 
+            border-radius: 15px; 
+            border: 1px solid rgba(255, 255, 255, 0.2); 
+            font-weight: 600; 
+            transition: 0.3s ease; 
         }
         .btn:hover { 
-            background: #d4af37; 
-            color: #000; 
-            transform: scale(1.05);
-            box-shadow: 0 0 20px rgba(212, 175, 55, 0.6);
-        }
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
+            background: rgba(255, 255, 255, 0.3); 
+            transform: translateY(-3px); 
         }
     </style>
 </head>
@@ -77,10 +74,10 @@
     <div class="card">
         <img src="Gemini_Generated_Image_c101ryc101ryc101.png" alt="Rahul Shukla">
         <h1>Rahul Shukla</h1>
-        <p style="color: #888; font-size: 0.8rem; letter-spacing: 2px;">OFFICIAL PROFILE</p>
+        <p>Official Digital Presence</p>
         <div class="links">
-            <a href="https://www.instagram.com/rahulshukla.2?igsh=MWpuNTRwZ2d6ZTl2dQ==" class="btn">Instagram</a>
-            <a href="https://www.facebook.com/share/1DvtWBu1kC/" class="btn">Facebook</a>
+            <a href="https://www.instagram.com/rahulshukla.2?igsh=MWpuNTRwZ2d6ZTl2dQ==" class="btn">Follow on Instagram</a>
+            <a href="https://www.facebook.com/share/1DvtWBu1kC/" class="btn">Connect on Facebook</a>
         </div>
     </div>
 </body>
